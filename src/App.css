@@ -1,42 +1,65 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Audiowide&family=Roboto+Slab:wght@100..900&display=swap");
+@import "tailwindcss";
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@layer utilities {
+  .bg-primary {
+    background-color: #0d0d0d;
   }
-  to {
-    transform: rotate(360deg);
+  .bg-secondary {
+    background-color: #2a2a2a;
+  }
+  .bg-terciary {
+    background-color: #1d1d1d;
+  }
+  .bg-highlight-primary {
+    background-color: #e6b422;
+  }
+  .bg-highlight-secondary {
+    background-color: #eacd61;
+  }
+  .bg-highlight-terciary {
+    background-color: #3cec85;
+  }
+  .text-highlight-primary {
+    color: #e6b422;
+  }
+  .text-highlight-secondary {
+    color: #eacd61;
+  }
+  .text-highlight-terciary {
+    color: #3cec85;
+  }
+
+  .text-title {
+    font-family: "Audiowide", sans-serif;
+  }
+  .text-default {
+    font-family: "Roboto Slab", serif;
+  }
+  .text-description {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+  }
+  .thin-border {
+    outline: 0.5px solid rgb(131, 131, 131);
+  }
+  .text-light {
+    color: rgb(187, 187, 187);
+  }
+  .hide-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+:root {
+  font-family: "Roboto Slab", serif;
+}
+@layer base {
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+html {
+  scroll-behavior: liquid-smooth;
 }
