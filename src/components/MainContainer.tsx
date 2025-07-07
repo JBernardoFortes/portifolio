@@ -1,24 +1,29 @@
 import { NavContainer } from "./NavContainer";
 import { HeaderContainer } from "./HeaderContainer";
 import { FooterContainer } from "./FooterContainer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { ProjectsList } from "./ProjectsList";
 import AboutMe from "./AboutMe";
 import { Contact } from "./Contact";
-export const MainContainer = () => {
-  return (
-    <div className="w-[95%] h-[93%] bg-primary m-auto thin-border relative overflow-hidden">
-      <Router>
-        <HeaderContainer></HeaderContainer>
-        <NavContainer></NavContainer>
+import { AnimatePresence } from "framer-motion";
 
-        <Routes>
+
+export const MainContainer = () => {
+  const location = useLocation();
+
+  return (
+    <div>
+     
+      <HeaderContainer></HeaderContainer>
+      <NavContainer></NavContainer>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
           <Route path="/" element={<FooterContainer></FooterContainer>} />
           <Route path="/projects" element={<ProjectsList></ProjectsList>} />
           <Route path="/about" element={<AboutMe></AboutMe>} />
           <Route path="/contact" element={<Contact></Contact>} />
         </Routes>
-      </Router>
+      </AnimatePresence>
     </div>
   );
 };
