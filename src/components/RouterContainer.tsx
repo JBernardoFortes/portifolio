@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { MainContainer } from "./MainContainer.tsx";
 export const RouterContainer = () => {
   return (
-    <div className="w-[95%] h-[93%] bg-primary m-auto thin-border relative overflow-hidden">
+    <div className="w-[95%] h-[93%] bg-primary m-auto thin-border relative overflow-hidden rounded-md">
       <Router>
         <MainContainer></MainContainer>
       </Router>

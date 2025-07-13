@@ -6,14 +6,13 @@ import { ProjectsList } from "./ProjectsList";
 import AboutMe from "./AboutMe";
 import { Contact } from "./Contact";
 import { AnimatePresence } from "framer-motion";
-
+import { Project } from "./Project";
 
 export const MainContainer = () => {
   const location = useLocation();
 
   return (
     <div>
-     
       <HeaderContainer></HeaderContainer>
       <NavContainer></NavContainer>
       <AnimatePresence mode="wait">
@@ -22,6 +21,7 @@ export const MainContainer = () => {
           <Route path="/projects" element={<ProjectsList></ProjectsList>} />
           <Route path="/about" element={<AboutMe></AboutMe>} />
           <Route path="/contact" element={<Contact></Contact>} />
+          <Route path="/projects/:id" element={<Project></Project>} />
         </Routes>
       </AnimatePresence>
     </div>
