@@ -21,17 +21,45 @@ export const NavContainer = () => {
             }`}
             to="/"
           >
-            Home
+            {" "}
+            {(location.pathname === "/" || location.pathname === "") && (
+              <motion.span
+                variants={slideFromLeft}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+                className="absolute left-5 items-center"
+              >
+                {" "}
+                ◆{" "}
+              </motion.span>
+            )}
+            <span>Home</span>
           </Link>
         </motion.li>
         <motion.li className="" variants={slideFromLeft}>
           <Link
             className={`w-[5vw] hover:text-white transition-colors duration-300 ${
-              location.pathname === "/projects" ? "text-highlight-primary" : ""
+              location.pathname.startsWith("/projects")
+                ? "text-highlight-primary"
+                : ""
             }`}
             to="/projects"
           >
-            Projects
+            {location.pathname.startsWith("/projects") && (
+              <motion.span
+                className="absolute left-5 items-center"
+                variants={slideFromLeft}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+              >
+                {" "}
+                ◆{" "}
+              </motion.span>
+            )}
+
+            <span>Projects</span>
           </Link>
         </motion.li>
         <motion.li className="" variants={slideFromLeft}>
@@ -41,7 +69,19 @@ export const NavContainer = () => {
             }`}
             to="/about"
           >
-            About me
+            {location.pathname === "/about" && (
+              <motion.span
+                className="absolute left-5 items-center"
+                variants={slideFromLeft}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+              >
+                {" "}
+                ◆{" "}
+              </motion.span>
+            )}
+            <span>About me</span>
           </Link>
         </motion.li>
         <motion.li className="" variants={slideFromLeft}>
@@ -51,7 +91,19 @@ export const NavContainer = () => {
             }`}
             to="/contact"
           >
-            How to contact me
+            {location.pathname === "/contact" && (
+              <motion.span
+                className="absolute left-5 items-center"
+                variants={slideFromLeft}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+              >
+                {" "}
+                ◆{" "}
+              </motion.span>
+            )}
+            <span>How to contact me</span>
           </Link>
         </motion.li>
       </motion.ul>

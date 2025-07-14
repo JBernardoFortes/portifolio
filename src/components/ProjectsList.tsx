@@ -28,31 +28,31 @@ const projects = [
     name: "Eight Puzzle Solver",
     repUrl: "https://github.com/JBernardoFortes/EightPuzzleSolver",
     pageUrl: "https://jbernardofortes.github.io/EightPuzzleSolver/",
-    desc: "Eight puzzle solver using different kinds of algorithms ( BFS, DFS, Greedy, A* ) ",
+    desc: "An interactive Eight Puzzle solver that demonstrates various search algorithms including Breadth-First Search (BFS), Depth-First Search (DFS), Greedy Search, and A* (A-Star). The application visualizes the step-by-step solving process, allowing users to understand and compare algorithm behaviors in real-time. Built using React and TypeScript, it emphasizes clarity, modularity, and algorithm visualization.",
   },
   {
     name: "Binary Tree",
     repUrl: "https://github.com/JBernardoFortes/BinaryTree",
     pageUrl: "https://jbernardofortes.github.io/BinaryTree/",
-    desc: "Binary Tree visualization application built using vueJS",
+    desc: "A binary tree visualization tool built entirely with Vue.js. Users can dynamically insert nodes and visualize the resulting binary tree structure in real time. This project aims to help learners and developers better understand tree-based data structures through an intuitive graphical interface. The UI is clean and minimalistic, focused solely on the visualization of operations like insertion.",
   },
   {
     name: "Sample Text Generator",
     repUrl: "https://github.com/JBernardoFortes/sampleTextGenerator",
     pageUrl: "https://jbernardofortes.github.io/sampleTextGenerator/",
-    desc: "Simple useful sample text generator using Hipster Ipsum API",
+    desc: "A simple web application that fetches and displays sample text using the Hipster Ipsum API. This tool can be used by designers and developers to quickly generate placeholder text for layouts and content mockups. The interface is user-friendly, with options to customize the number of paragraphs. Built using React and TypeScript, it showcases basic API consumption and functional UI design.",
   },
   {
     name: "Tic Tac Toe",
     repUrl: "https://github.com/JBernardoFortes/TicTacToe",
     pageUrl: "https://jbernardofortes.github.io/TicTacToe/",
-    desc: "Simple Tic Tac Toe game",
+    desc: "A classic Tic Tac Toe game with a clean and responsive design. Players can enjoy a two-player match on the same screen, with real-time updates and win condition detection. The application is developed using React and TypeScript, highlighting the use of state management and basic game logic in a modern frontend framework.",
   },
   {
     name: "Stopwatch and Timer",
     repUrl: "https://github.com/JBernardoFortes/stopwatchAndTimer",
     pageUrl: "https://jbernardofortes.github.io/stopwatchAndTimer/",
-    desc: "Stopwatch and timer application using built using React Router",
+    desc: "A dual-function application providing both stopwatch and timer capabilities. Users can start, stop, reset, and configure time durations through an intuitive interface. Built with React, React Router, and TypeScript, the project emphasizes component reusability, route-based navigation, and precise time-based operations.",
   },
 ];
 
